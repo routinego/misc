@@ -23,7 +23,7 @@ var (
 )
 
 func setup() error {
-	file, err := os.OpenFile(srcPath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 644)
+	file, err := os.OpenFile(srcPath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
 	if err != nil {
 		return fmt.Errorf("failed to create file: %s", err.Error())
 	}
